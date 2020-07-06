@@ -4,12 +4,12 @@ pipeline{
   maven 'Maven'
 }
 
-    stages{
+   /* stages{
         stage('Git cloning'){
             steps{
                 git credentialsId: 'github', url: 'https://github.com/chandana-devops/demowebapp'
             }
-        }
+        }*/
         stage('Maven packaging'){
             steps{
                 sh 'mvn clean package'
