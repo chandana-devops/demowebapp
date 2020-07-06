@@ -1,5 +1,5 @@
 <html>
 <body>
-<h1 style="color: Orange">First pipeline job automation!!</h1>
+<h1 style="color: Yellow">First pipeline job automation!!</h1>
 </body>
 </html>
