@@ -1,0 +1,13 @@
+def call(config){
+def username = config['username']
+def credid = config['credid']
+def tomcatip = config['tomcatip']
+def tomcatadd = config['tomcatadd']
+def warfile = config['warfile']
+sshagent(['sshagent']) {
+    sh "ssh -o StrictHostKeyChecking=no ${credid}@${tomcatip} ${tomcatadd}/bin/shutdown.sh"
+sh "ssh ${credid}@${tomcatip} rm -rf ${tomcatadd}/webapps/${warfile}*"
+sh "scp target/$springmvc.war ${credid}@${tomcatip}:${tomcatadd}/webapps/"
+sh "ssh ${credid}@${tomcatip} ${tomcatadd}/bin/startup.sh"
+}
+}
