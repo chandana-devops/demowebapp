@@ -1,5 +1,5 @@
 <html>
 <body>
-<h1 style="color: greenorange">jenkins job</h1>
+<h1 style="color: voilet">jenkins job</h1>
 </body>
 </html>
