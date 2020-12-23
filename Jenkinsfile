@@ -17,7 +17,7 @@ pipeline{
     }
     stage('Deployment to Tomcat'){
         steps{
-            sshagent(['Slave_one']) {
+            sshagent(['slave_one']) {
     sh "ssh ec2-user@52.66.241.93 /opt/tomcat8/bin/shutdown.sh"
     sh "ssh ec2-user@52.66.241.93 rm -rf /opt/tomcat8/webapps/springmvc*"
     sh "scp target/springmvc.war ec2-user@52.66.241.93:/opt/tomcat8/webapps"
